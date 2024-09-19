@@ -1,0 +1,5 @@
+FROM mysql:latest
+
+ENV MYSQL_ROOT_PASSWORD=rootpass
+
+RUN sed -i '/^local_infile/s/=.*/=ON/' /etc/mysql/my.cnf
